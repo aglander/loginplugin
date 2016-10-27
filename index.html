@@ -18,9 +18,11 @@
 
     <section class="main-content">
       <script>
-      function onXingAuthLogin() {
+      function onXingAuthLogin(user) {
+        console.log(data);
         var code = window.location.href.split("?")[1];
-        window.location = "https://doodle.com/coupon?couponId=" + code;
+       console.log(code);
+        // window.location = "https://doodle.com/coupon?couponId=" + code;
       }        
       </script>
       <script type="xing/login">
