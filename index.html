@@ -21,7 +21,7 @@
       function onXingAuthLogin(data) {
         
         console.log(data);
-        if (data.error != null) {
+        if (data.user !== null && data.error === null) {
           console.log('logged in');
         var code = window.location.href.split("?")[1];
           console.log(code);
