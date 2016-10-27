@@ -18,11 +18,14 @@
 
     <section class="main-content">
       <script>
-      function onXingAuthLogin(user) {
-        console.log(user);
+      function onXingAuthLogin(data) {
+        if (data.user && data.error != null) {
         var code = window.location.href.split("?")[1];
        console.log(code);
         // window.location = "https://doodle.com/coupon?couponId=" + code;
+        } else {
+          console.log('not logged in');
+        }
       }        
       </script>
       <script type="xing/login">
